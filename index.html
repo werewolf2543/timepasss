@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Select Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="startScreen">
+        <h1>Start Game</h1>
+        <button onclick="startGame()">Start</button>
+    </div>
+
+    <div id="characterSelectScreen" style="display: none;">
+        <h2>Select Your Character</h2>
+        <button onclick="selectCharacter('parth')">Parth</button>
+        <button onclick="selectCharacter('harley')">Harley</button>
+        <button onclick="selectCharacter('tejas')">Tejas</button>
+    </div>
+
+    <div id="gameScreen" style="display: none;">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="scoreBoard">Score: 0</div>
+        <div id="reloadBarContainer">
+            <div id="reloadBar"></div>
+        </div>
+    </div>
+
+    <div id="endScreen" style="display: none;">
+        <h2>Game Over</h2>
+        <p id="finalScore"></p>
+        <button onclick="restartGame()">Play Again</button>
+        <button onclick="chooseDifferentCharacter()">Choose Different Character</button>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="selectionMusic" src="selection-music.mp3" loop></audio>
+    <audio id="gameplayMusic" src="gameplay-music.mp3" loop></audio>
+    <audio id="gameOverMusic" src="gameover-music.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
